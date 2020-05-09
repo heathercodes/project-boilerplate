@@ -1,0 +1,16 @@
+{
+  "name": "project-boilerplate",
+  "version": "1.0.0",
+  "description": "basic web project boilerplate",
+  "author": "Heather Pierce",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.0.1"
+  },
+  "scripts": {
+    "start": "concurrently \"cd client && npm run start\" \"cd server && npm run start\"",
+    "test": "concurrently \"cd client && npm test\" \"cd server && npm run test\"",
+    "lint": "concurrently \"cd client && npm run lint\" \"cd server && npm run lint\"",
+    "setup": "npm i && concurrently \"cd client && npm i\" \"cd server && npm i\""
+  }
+}
