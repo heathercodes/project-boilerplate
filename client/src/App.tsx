@@ -1,11 +1,16 @@
-/** @jsx jsx */
-import * as React from 'react';
-import { jsx } from '@emotion/core';
-import { Route, Switch } from 'react-router-dom';
-import { WanderlistProvider } from './provider/wanderlistProvider';
-import { LandingPage } from './components/login';
-import { InteractiveMap } from './components/map';
+import React from 'react';
+import { LandingPage } from './pages';
+import { GlobalProvider } from './providers/GlobalProvider';
+import './App.module.css';
 
-export default function App(): JSX.Element {
-    return <div>Hello World</div>;
+function App(): React.ReactElement {
+  return (
+    <GlobalProvider>
+      <div className="App">
+        <LandingPage />
+      </div>
+    </GlobalProvider>
+  );
 }
+
+export default App;

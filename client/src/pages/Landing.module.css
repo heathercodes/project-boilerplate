@@ -1,0 +1,13 @@
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 0.7;
+  margin-bottom: 0;
+}
